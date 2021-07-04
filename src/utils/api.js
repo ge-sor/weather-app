@@ -17,6 +17,6 @@ export const getWeatherByCity = (city) => {
 
 export const getForecast = (lon, lat) => {
   return fetch(
-    `${BASE_URL}/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely,current&appid=${key}&units=metric&lang=ru`
+    `${BASE_URL}/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&appid=${key}&units=metric&lang=ru`
   ).then(handleResponse);
 };

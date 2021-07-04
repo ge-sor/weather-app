@@ -7,7 +7,8 @@ export default function PlacePopup({ onClose, card }) {
   useEffect(() => {
     if (card) {
       api.getForecast(card.coord.lon, card.coord.lat).then((res) => {
-
+console.log(card)
+console.log(res)
         const newForecast = {
           temp: `${Math.floor(res.daily[1].temp.day)}°C`,
           icon: `http://openweathermap.org/img/wn/${res.daily[1].weather[0].icon}.png`,
@@ -20,22 +21,22 @@ export default function PlacePopup({ onClose, card }) {
         const duskTomorrowUnix = new Date(res.daily[1].sunset * 1000);
 
         newForecast.dusk = duskUnix.toLocaleTimeString([], {
-          timeZone: res.timeZone,
+          timeZone: res.timezone,
           hour: "2-digit",
           minute: "2-digit",
         });
         newForecast.dawn = dawnUnix.toLocaleTimeString([], {
-          timeZone: res.timeZone,
+          timeZone: res.timezone,
           hour: "2-digit",
           minute: "2-digit",
         });
         newForecast.duskTomorrow = duskTomorrowUnix.toLocaleTimeString([], {
-          timeZone: res.timeZone,
+          timeZone: res.timezone,
           hour: "2-digit",
           minute: "2-digit",
         });
         newForecast.dawnTomorrow = dawnTomorrowUnix.toLocaleTimeString([], {
-          timeZone: res.timeZone,
+          timeZone: res.timezone,
           hour: "2-digit",
           minute: "2-digit",
         });
