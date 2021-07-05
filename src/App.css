@@ -7,6 +7,12 @@
   padding: 50px;
 }
 
+@media screen and (max-width: 600px) {
+  .page {
+    padding-left: 30px;
+  }
+}
+
 .card {
   display: flex;
   width: 350px;
@@ -20,6 +26,12 @@
   box-shadow: 2px 2px 2px #366c49;
   border-radius: 5px;
   transition: 0.3s;
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 220px;
+  }
 }
 
 .card:hover {
@@ -44,6 +56,13 @@
 .card__text {
   font-size: 20px;
   width: 250px;
+}
+
+@media screen and (max-width: 600px) {
+  .card__text {
+    font-size: 16px;
+    width: 150px;
+  }
 }
 
 .card__time-text {
