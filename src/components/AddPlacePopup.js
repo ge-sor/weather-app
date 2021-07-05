@@ -29,7 +29,7 @@ function AddPlacePopup({ addCard, isOpen, onClose, error }) {
     api
       .getWeatherByCity(item.title)
       .then((res) => {
-        console.log(res);
+
         const newCard = {
           id: uuidv4(),
           title: res.name,
@@ -41,11 +41,9 @@ function AddPlacePopup({ addCard, isOpen, onClose, error }) {
           },
         };
         addCard(newCard);
-        console.log(newCard);
         onClose();
       })
-      .catch((err) => {
-        console.log(err);
+      .catch(() => {
         onClose();
         error();
       });

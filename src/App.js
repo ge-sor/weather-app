@@ -55,9 +55,8 @@ const App = ({ cards, addCard }) => {
           };
           addCard(newCard);
         })
-        .catch((err) => {
+        .catch(() => {
           setIsErrorPopupOpen(true);
-          console.log(err);
         });
     });
   }, [addCard]);
