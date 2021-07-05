@@ -46,7 +46,7 @@ const App = ({ cards, addCard }) => {
             id: uuidv4(),
             title: "Моё местоположение",
             temp: `${Math.floor(res.main.temp)}°C`,
-            icon: `http://openweathermap.org/img/wn/${res.weather[0].icon}.png`,
+            icon: `https://openweathermap.org/img/wn/${res.weather[0].icon}.png`,
             weather: res.weather[0].description,
             coord: {
               lon: res.coord.lon,

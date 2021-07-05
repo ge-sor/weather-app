@@ -34,7 +34,7 @@ function AddPlacePopup({ addCard, isOpen, onClose, error }) {
           id: uuidv4(),
           title: res.name,
           temp: `${Math.floor(res.main.temp)}°C`,
-          icon: `http://openweathermap.org/img/wn/${res.weather[0].icon}.png`,
+          icon: `https://openweathermap.org/img/wn/${res.weather[0].icon}.png`,
           coord: {
             lon: res.coord.lon,
             lat: res.coord.lat,

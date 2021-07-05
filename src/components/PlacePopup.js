@@ -9,7 +9,7 @@ export default function PlacePopup({ onClose, card }) {
       api.getForecast(card.coord.lon, card.coord.lat).then((res) => {
         const newForecast = {
           temp: `${Math.floor(res.daily[1].temp.day)}°C`,
-          icon: `http://openweathermap.org/img/wn/${res.daily[1].weather[0].icon}.png`,
+          icon: `https://openweathermap.org/img/wn/${res.daily[1].weather[0].icon}.png`,
           weather: res.daily[1].weather.description,
         };
 
@@ -74,12 +74,12 @@ export default function PlacePopup({ onClose, card }) {
           let yA = center_y - 10 + radius * Math.sin((-angleB * Math.PI) / 180);
 
           const sun = new Image();
-          sun.src = `http://openweathermap.org/img/wn/01d.png`;
+          sun.src = `https://openweathermap.org/img/wn/01d.png`;
           sun.onload = function () {
             ctx.drawImage(sun, x, y, 20, 20);
           };
           const moon = new Image();
-          moon.src = `http://openweathermap.org/img/wn/01n.png`;
+          moon.src = `https://openweathermap.org/img/wn/01n.png`;
           moon.onload = function () {
             ctx.drawImage(moon, xA, yA, 20, 20);
           };
