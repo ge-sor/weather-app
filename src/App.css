@@ -164,6 +164,12 @@
   margin: 0 0 30px 0;
 }
 
+@media screen and (max-width: 600px) {
+  .form__input {
+    width: 250px;
+  }
+}
+
 .form__input::placeholder {
   color: black;
 }
